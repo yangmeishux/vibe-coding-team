@@ -2,11 +2,11 @@
 
 # 🎹 Vibe Coding Team SKILL
 
-[![GitHub release](https://img.shields.io/github/release/yourusername/vibe-coding-team?style=flat-square)](https://github.com/yourusername/vibe-coding-team/releases)
-[![License](https://img.shields.io/github/license/yourusername/vibe-coding-team?style=flat-square)](LICENSE)
+[![GitHub release](https://img.shields.io/github/release/yangmeishux/vibe-coding-team?style=flat-square)](https://github.com/yangmeishux/vibe-coding-team/releases)
+[![License](https://img.shields.io/github/license/yangmeishux/vibe-coding-team?style=flat-square)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-purple?style=flat-square&logo=anthropic)](https://claude.com/claude-code)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/vibe-coding-team?style=flat-square)](https://github.com/yourusername/vibe-coding-team/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/yourusername/vibe-coding-team?style=flat-square)](https://github.com/yourusername/vibe-coding-team/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/yangmeishux/vibe-coding-team?style=flat-square)](https://github.com/yangmeishux/vibe-coding-team/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/yangmeishux/vibe-coding-team?style=flat-square)](https://github.com/yangmeishux/vibe-coding-team/issues)
 
 **🎨 AI 协作的 Vibe Coding 系统 - 从"如何实现"转向"需要什么"**
 
@@ -116,7 +116,7 @@ English • 简体中文
 cd ~/.claude/skills
 
 # 克隆仓库
-git clone https://github.com/yourusername/vibe-coding-team.git
+git clone https://github.com/yangmeishux/vibe-coding-team.git
 
 # 验证安装
 ls vibe-coding-team/SKILL.md  # 应该显示文件存在
@@ -127,7 +127,7 @@ ls vibe-coding-team/SKILL.md  # 应该显示文件存在
 <details>
 <summary><b>方式 2: 手动下载</b></summary>
 
-1. 访问 [Releases](https://github.com/yourusername/vibe-coding-team/releases) 页面
+1. 访问 [Releases](https://github.com/yangmeishux/vibe-coding-team/releases) 页面
 2. 下载最新版本的 ZIP 文件
 3. 解压到 `~/.claude/skills/` 目录
 4. 确保文件夹名为 `vibe-coding-team`
@@ -161,9 +161,125 @@ claude
 
 ---
 
+## 🔥 OpenCode 使用
+
+Vibe Coding Team SKILL 已完美集成到 OpenCode 平台，提供更强大的 AI 协作能力。
+
+### 在 OpenCode 中使用
+
+#### 1️⃣ 自动激活
+
+OpenCode 会自动识别并加载已安装的 SKILL，无需额外配置。
+
+#### 2️⃣ 触发方式
+
+在 OpenCode 中，Vibe Coding Team 可以通过以下方式触发：
+
+```bash
+# 方式 1: 直接调用（推荐）
+[vibe-architect] 我需要开发一个用户管理系统
+
+# 方式 2: 任务分类
+[task:coding] 实现用户认证功能
+
+# 方式 3: 指定 Agent
+[@vibe-coder] 生成登录接口代码
+[@vibe-reviewer] 审查这段代码
+[@vibe-debugger] 修复这个 bug
+[@vibe-documenter] 生成 API 文档
+```
+
+#### 3️⃣ OpenCode 优势
+
+- 🚀 **并行执行**: OpenCode 可以并行调度多个 Agent，大幅提升效率
+- 📊 **进度可视化**: 实时查看各 Agent 的工作进度和状态
+- 🔄 **会话管理**: 自动保存会话上下文，支持断点续传
+- 🎯 **智能路由**: OpenCode 会根据任务类型自动选择最合适的 Agent
+- 📝 **结果追踪**: 所有输出自动归档，方便回顾和复用
+
+#### 4️⃣ OpenCode 工作流示例
+
+```bash
+# 启动 OpenCode
+opencode
+
+# 使用 Vibe Coding Team
+> [vibe-architect] 我需要开发一个任务管理应用，支持：
+  - 任务创建、编辑、删除
+  - 任务状态管理
+  - 任务标签和优先级
+  使用 React + Node.js + MongoDB
+
+# OpenCode 会自动：
+# ✅ 识别 [vibe-architect] 触发器
+# ✅ 调用 vibe-architect Agent 进行需求分析
+# ✅ 并行协调其他 Agent 执行任务
+# ✅ 实时显示进度和状态
+# ✅ 整合所有结果
+```
+
+#### 5️⃣ 与 OpenCode SKILL 配合
+
+Vibe Coding Team 可以与其他 OpenCode SKILL 无缝配合：
+
+```bash
+# 完整开发管道
+[vibe-architect] 开发 Web 应用
+  ↓ (自动触发)
+[vibe-coder] 实现功能
+  ↓
+/vibe-coding-team    # Agent 团队协作
+  ↓
+/playwright          # 端到端测试
+  ↓
+/obsidian-markdown   # 格式化文档
+  ↓
+/docx                # 生成 Word 文档
+  ↓
+/pdf                 # 导出 PDF
+```
+
+### OpenCode 高级功能
+
+#### 会话管理
+
+```bash
+# 查看活跃会话
+> session list
+
+# 继续之前的会话
+> [vibe-architect] 继续之前的任务，优化用户认证模块
+
+# OpenCode 会自动加载之前的上下文
+```
+
+#### 后台任务
+
+```bash
+# 启动后台任务
+> [vibe-architect] 并行开发以下模块：
+  - 用户服务（后台任务 1）
+  - 商品服务（后台任务 2）
+  - 订单服务（后台任务 3）
+
+# OpenCode 会在后台并行执行，不影响你的其他工作
+```
+
+#### 结果追溯
+
+```bash
+# 查看特定 Agent 的输出
+> show vibe-coder output from session ses_abc123
+
+# 查看完整的开发历史
+> history --agent vibe-architect --last 10
+```
+
+---
+
 ## 💡 使用示例
 
-### 示例 1️⃣: 快速原型开发
+### 示例 1️⃣: 快速原型开发（OpenCode 版）
 
 ```bash
 # 启动 Claude Code
@@ -177,19 +293,19 @@ claude
   使用 React + Node.js + MongoDB，请协调团队完成
 ```
 
-**执行流程**：
+**执行流程（OpenCode 增强）**：
 ```
 Phase 1: 需求分析与架构设计
   ├─ Vibe Architect → 分析需求、设计架构、定义接口
   └─ Vibe Architect → 选择技术栈（React + Node.js + MongoDB）
 
-Phase 2: 代码生成
-  ├─ Vibe Coder → 生成后端 API（Express + MongoDB）
-  └─ Vibe Coder → 生成前端组件（React）
+Phase 2: 代码生成（OpenCode 并行）
+  ├─ Vibe Coder → 生成后端 API（Express + MongoDB） [并行任务 1]
+  └─ Vibe Coder → 生成前端组件（React） [并行任务 2]
 
-Phase 3: 质量保证
-  ├─ Vibe Reviewer → 审查代码质量、安全性、性能
-  └─ Vibe Debugger → 生成测试用例
+Phase 3: 质量保证（OpenCode 并行）
+  ├─ Vibe Reviewer → 审查代码质量、安全性、性能 [并行任务 1]
+  └─ Vibe Debugger → 生成测试用例 [并行任务 2]
 
 Phase 4: 文档生成
   ├─ Vibe Documenter → 生成 API 文档
@@ -198,7 +314,13 @@ Phase 4: 文档生成
 Phase 5: 最终交付
   └─ Vibe Architect → 整合并质量把控
 
-总耗时: 约 2-3 小时
+OpenCode 特性:
+  ✅ 自动并行执行独立任务
+  ✅ 实时进度可视化
+  ✅ 自动保存会话状态
+  ✅ 支持断点续传
+
+总耗时: 约 1.5-2 小时（并行执行）
 产出: 可运行的任务管理应用 + 测试 + 完整文档
 ```
 
@@ -320,12 +442,12 @@ graph LR
 
 ## 🔗 与其他 SKILL 配合
 
-### 完整开发管道
+### 完整开发管道（OpenCode）
 
 ```bash
 /planning-with-files     # 1. 制定项目计划
   ↓
-/vibe-coding-team        # 2. Agent 团队协作开发
+/vibe-coding-team        # 2. Agent 团队协作开发（OpenCode 并行）
   ↓
 /playwright              # 3. 端到端测试
   ↓
@@ -336,10 +458,10 @@ graph LR
 /pdf                    # 6. 导出 PDF
 ```
 
-### API 开发管道
+### API 开发管道（OpenCode）
 
 ```bash
-/vibe-coding-team        # 1. 开发 API
+/vibe-coding-team        # 1. 开发 API（OpenCode 并行）
   ↓
 /playwright              # 2. API 测试
   ↓
@@ -348,10 +470,10 @@ graph LR
 /docx                   # 4. 导出 API 规范
 ```
 
-### 快速原型管道
+### 快速原型管道（OpenCode）
 
 ```bash
-/vibe-coding-team        # 1. 快速开发原型
+/vibe-coding-team        # 1. 快速开发原型（OpenCode 并行）
   ↓
 /playwright              # 2. 基础功能测试
   ↓
@@ -369,6 +491,7 @@ graph LR
 - ✅ **快速原型开发**：数小时将想法转化为可运行应用
 - ✅ **完整文档生成**：自动生成 API 文档、架构说明、使用手册
 - ✅ **灵活协作模式**：可与其他 SKILL 配合，构建完整开发流程
+- ✅ **OpenCode 深度集成**：支持并行执行、进度可视化、会话管理
 - ✅ **持续更新**：活跃维护和功能迭代
 
 ---
@@ -455,8 +578,8 @@ vibe-coding-team/
 
 感谢所有贡献者！
 
-<a href="https://github.com/yourusername/vibe-coding-team/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=yourusername/vibe-coding-team" />
+<a href="https://github.com/yangmeishux/vibe-coding-team/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yangmeishux/vibe-coding-team" />
 </a>
 
 ---
@@ -486,9 +609,9 @@ in the Software without restriction...
 
 ## 📮 联系方式
 
-- **项目主页**: [https://github.com/yourusername/vibe-coding-team](https://github.com/yourusername/vibe-coding-team)
-- **问题反馈**: [Issues](https://github.com/yourusername/vibe-coding-team/issues)
-- **功能建议**: [Discussions](https://github.com/yourusername/vibe-coding-team/discussions)
+- **项目主页**: [https://github.com/yangmeishux/vibe-coding-team](https://github.com/yangmeishux/vibe-coding-team)
+- **问题反馈**: [Issues](https://github.com/yangmeishux/vibe-coding-team/issues)
+- **功能建议**: [Discussions](https://github.com/yangmeishux/vibe-coding-team/discussions)
 
 ---
 
