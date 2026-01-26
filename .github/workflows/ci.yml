@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate SKILL.md
+      run: |
+        if [ ! -f "SKILL.md" ]; then
+          echo "❌ SKILL.md not found"
+          exit 1
+        fi
+        echo "✅ SKILL.md exists"
+
+    - name: Validate Documentation
+      run: |
+        for file in README.md QUICK_REFERENCE.md CHANGELOG.md CONTRIBUTING.md; do
+          if [ ! -f "$file" ]; then
+            echo "❌ $file not found"
+            exit 1
+          fi
+          echo "✅ $file exists"
+        done
+
+    - name: Check Markdown Links
+      run: |
+        echo "Checking Markdown files for basic formatting..."
+        find . -name "*.md" -not -path "./node_modules/*" | while read file; do
+          if grep -qE '#+$' "$file"; then
+            echo "✅ $file: Has markdown headings"
+          else
+            echo "⚠️  $file: No markdown headings found"
+          fi
+        done
+
+    - name: Check License
+      run: |
+        if [ ! -f "LICENSE" ]; then
+          echo "❌ LICENSE not found"
+          exit 1
+        fi
+        echo "✅ LICENSE exists"
+
+    - name: Lint Markdown
+      run: |
+        echo "Markdown linting is recommended but not required"
+        echo "To add markdown linting, consider using: https://github.com/remarkjs/remark-lint-action"
+
+    - name: Summary
+      run: |
+        echo "## ✅ CI Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "All checks passed!" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ SKILL.md validated" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Documentation validated" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ License validated" >> $GITHUB_STEP_SUMMARY

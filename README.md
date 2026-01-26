@@ -1,0 +1,510 @@
+<div align="center">
+
+# 🎹 Vibe Coding Team SKILL
+
+[![GitHub release](https://img.shields.io/github/release/yourusername/vibe-coding-team?style=flat-square)](https://github.com/yourusername/vibe-coding-team/releases)
+[![License](https://img.shields.io/github/license/yourusername/vibe-coding-team?style=flat-square)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-purple?style=flat-square&logo=anthropic)](https://claude.com/claude-code)
+[![GitHub Stars](https://img.shields.io/github/stars/yourusername/vibe-coding-team?style=flat-square)](https://github.com/yourusername/vibe-coding-team/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/yourusername/vibe-coding-team?style=flat-square)](https://github.com/yourusername/vibe-coding-team/issues)
+
+**🎨 AI 协作的 Vibe Coding 系统 - 从"如何实现"转向"需要什么"**
+
+基于 Andrej Karpathy 的 Vibe Coding 理念，通过 5 个专业 AI Agent 协作，实现自然语言驱动的软件开发
+
+[功能介绍](#-核心功能) • [快速开始](#-快速开始) • [使用示例](#-使用示例) • [文档](#-文档) • [贡献](#-贡献)
+
+English • 简体中文
+
+</div>
+
+---
+
+## ✨ 什么是 Vibe Coding？
+
+🤔 **传统编程的痛点**：
+- 需要精通语法、算法、框架
+- 从需求到代码需要大量手动工作
+- 开发周期长，迭代成本高
+- 技术门槛高，非开发者难以参与
+
+✅ **Vibe Coding 的优势**：
+- 🎯 **自然语言驱动**：用中文描述需求，AI 自动生成代码
+- 🎭 **专业 Agent 团队**：5 个专业 AI 各司其职，协作完成开发
+- 🔄 **四阶段工作流**：创意 → 生成 → 调试 → 审查，质量有保障
+- ⚡ **快速原型**：数小时将想法转化为可运行的应用
+- 🎹 **指挥家模式**：你负责表达意图和把控质量，AI 负责执行细节
+
+<div align="center">
+
+**从代码工匠到 AI 协作指挥家，开发方式质的飞跃！**
+
+</div>
+
+---
+
+## 📊 核心功能
+
+### 🎭 5 大专业 Agent
+
+| Agent | 角色 | 🎯 核心能力 | ⚡ 使用场景 |
+|:-----:|:-----:|:-----------|:-----------|
+| **Vibe Architect** | 架构指挥官 | 需求分析、架构设计、技术选型、团队协调 | 项目启动、架构决策、多 Agent 协调 |
+| **Vibe Coder** | 编码乐手 | 代码生成、功能实现、设计模式应用 | API 开发、业务逻辑、模块实现 |
+| **Vibe Reviewer** | 质量守门人 | 代码审查、安全检查、性能评估 | 质量保证、安全审计、性能优化 |
+| **Vibe Debugger** | 调试专家 | 错误诊断、测试生成、问题修复 | Bug 修复、测试覆盖、问题排查 |
+| **Vibe Documenter** | 文档生成器 | API 文档、架构说明、决策记录 | 文档生成、知识管理、最佳实践 |
+
+### 🔄 三种使用方式
+
+#### 方式 1️⃣: 让架构师协调（推荐用于完整项目）
+
+```bash
+[vibe-architect] 我需要开发一个电商平台的用户系统，支持：
+  - 用户注册和登录（JWT 认证）
+  - 个人信息管理
+  - 订单历史查询
+  请协调团队完成开发
+```
+
+**Vibe Architect 自动**：
+- ✅ 分析需求，设计架构
+- ✅ 定义模块和接口
+- ✅ 协调 Agent 并行开发
+- ✅ 设置质量检查点
+- ✅ 整合最终输出
+
+#### 方式 2️⃣: 指定特定 Agent（推荐用于单一任务）
+
+```bash
+[vibe-architect] 设计一个 RESTful API 的用户认证系统
+
+[@vibe-coder] 实现用户登录和注册的 API 端点
+
+[@vibe-reviewer] 审查这段代码的安全性和性能
+
+[@vibe-debugger] 生成单元测试和集成测试
+
+[@vibe-documenter] 生成 API 文档和使用示例
+```
+
+#### 方式 3️⃣: 任务分类（快速模式）
+
+```bash
+[task:planning] 设计一个博客系统的后端架构
+
+[task:coding] 实现文章的 CRUD 接口
+
+[task:review] 检查评论功能的安全性
+
+[task:debugging] 修复支付接口的错误并生成测试
+
+[task:documentation] 生成 API 文档
+```
+
+---
+
+## 🚀 快速开始
+
+### 📥 安装
+
+<details>
+<summary><b>方式 1: Git 克隆（推荐）</b></summary>
+
+```bash
+# 进入 Claude Code SKILLS 目录
+cd ~/.claude/skills
+
+# 克隆仓库
+git clone https://github.com/yourusername/vibe-coding-team.git
+
+# 验证安装
+ls vibe-coding-team/SKILL.md  # 应该显示文件存在
+```
+
+</details>
+
+<details>
+<summary><b>方式 2: 手动下载</b></summary>
+
+1. 访问 [Releases](https://github.com/yourusername/vibe-coding-team/releases) 页面
+2. 下载最新版本的 ZIP 文件
+3. 解压到 `~/.claude/skills/` 目录
+4. 确保文件夹名为 `vibe-coding-team`
+
+</details>
+
+<details>
+<summary><b>方式 3: 复制文件（最简单）</b></summary>
+
+```bash
+# Windows PowerShell
+Copy-Item -Path "vibe-coding-team" -Destination "$env:USERPROFILE\.claude\skills\" -Recurse
+
+# Linux/Mac
+cp -r vibe-coding-team ~/.claude/skills/
+```
+
+</details>
+
+### ✅ 验证安装
+
+```bash
+# 启动 Claude Code
+claude
+
+# 测试 SKILL
+> [vibe-architect] 测试一下 Vibe Coding Team 是否正常工作
+```
+
+如果看到 Agent 团队响应，说明安装成功！
+
+---
+
+## 💡 使用示例
+
+### 示例 1️⃣: 快速原型开发
+
+```bash
+# 启动 Claude Code
+claude
+
+# 让架构师协调团队完成快速原型
+> [vibe-architect] 我想快速开发一个简单的任务管理应用，支持：
+  - 任务的创建、编辑、删除
+  - 任务状态管理（待办、进行中、已完成）
+  - 任务标签和分类
+  使用 React + Node.js + MongoDB，请协调团队完成
+```
+
+**执行流程**：
+```
+Phase 1: 需求分析与架构设计
+  ├─ Vibe Architect → 分析需求、设计架构、定义接口
+  └─ Vibe Architect → 选择技术栈（React + Node.js + MongoDB）
+
+Phase 2: 代码生成
+  ├─ Vibe Coder → 生成后端 API（Express + MongoDB）
+  └─ Vibe Coder → 生成前端组件（React）
+
+Phase 3: 质量保证
+  ├─ Vibe Reviewer → 审查代码质量、安全性、性能
+  └─ Vibe Debugger → 生成测试用例
+
+Phase 4: 文档生成
+  ├─ Vibe Documenter → 生成 API 文档
+  └─ Vibe Documenter → 生成使用说明
+
+Phase 5: 最终交付
+  └─ Vibe Architect → 整合并质量把控
+
+总耗时: 约 2-3 小时
+产出: 可运行的任务管理应用 + 测试 + 完整文档
+```
+
+### 示例 2️⃣: API 开发
+
+```bash
+# 需求分析
+> [task:planning] 设计一个电商平台的商品管理 API，需要支持：
+  - 商品的创建、读取、更新、删除（CRUD）
+  - 商品分类和标签
+  - 商品搜索和过滤
+  - 库存管理
+  使用 Node.js + Express + MongoDB
+
+# 代码生成
+> [task:coding] 实现商品的 CRUD API 端点
+
+# 代码审查
+> [task:review] 检查 API 的安全性（SQL 注入、XSS）和性能
+
+# 文档生成
+> [task:documentation] 生成完整的 API 文档和使用示例
+```
+
+**产出**：
+- ✅ 完整的商品管理 API
+- ✅ 安全性和性能评估报告
+- ✅ 全面的 API 文档
+- ✅ 使用示例和最佳实践
+
+### 示例 3️⃣: Bug 修复
+
+```bash
+# 错误诊断
+> [task:debugging] 这个登录接口总是返回 500 错误，错误日志如下：
+  Error: Cannot read property 'password' of undefined
+  at /routes/auth.js:25
+  请分析问题并提供修复方案
+
+# Vibe Debugger 会：
+# 1. 分析错误日志和代码
+# 2. 定位问题根源
+# 3. 提供修复方案
+# 4. 生成测试用例
+# 5. 验证修复效果
+```
+
+---
+
+## 📚 工作流程
+
+### 标准 Vibe Coding 流程
+
+```mermaid
+graph LR
+    A[用户自然语言需求] --> B[Vibe Architect 需求分析]
+    B --> C[架构设计和技术选型]
+    C --> D[Vibe Coder 代码生成]
+    D --> E[Vibe Reviewer 质量审查]
+    E --> F[Vibe Debugger 测试生成]
+    F --> G[Vibe Documenter 文档生成]
+    G --> H[Vibe Architect 最终把控]
+    H --> I[高质量交付物]
+```
+
+### 快速原型流程
+
+```mermaid
+graph LR
+    A[Vibe Architect] --> B[Vibe Coder 快速生成]
+    B --> C[Vibe Debugger 基础测试]
+    C --> D[Vibe Architect 快速交付]
+```
+
+---
+
+## 🎯 最佳实践
+
+### ✅ DO (推荐做法)
+
+1. **明确需求和约束**
+   ```bash
+   ❌ [vibe-architect] 做个博客
+   ✅ [vibe-architect] 设计一个博客系统，支持用户认证、文章管理、评论功能，
+     使用 Node.js + Express + MongoDB，需要 RESTful API 和响应式前端
+   ```
+
+2. **合理选择使用方式**
+   ```bash
+   完整项目 → 让 vibe-architect 协调团队
+   单一任务 → 直接指定特定 Agent
+   快速开发 → 使用 [task:category] 快速模式
+   ```
+
+3. **遵循工作流程**
+   ```
+   架构先行（vibe-architect → vibe-coder）
+   质量跟进（vibe-reviewer）
+   测试保障（vibe-debugger）
+   文档完善（vibe-documenter）
+   ```
+
+4. **提供具体反馈**
+   ```bash
+   ✅ [@vibe-reviewer] 这段代码存在 SQL 注入风险，需要使用参数化查询
+   ✅ [@vibe-coder] 这个 API 响应格式不符合 RESTful 规范，需要调整
+   ✅ [@vibe-debugger] 测试覆盖不够，需要添加边界情况测试
+   ```
+
+### ❌ DON'T (避免做法)
+
+1. ❌ 对简单任务使用全部 Agent（效率低）
+2. ❌ 跳过架构设计直接编码（技术债务）
+3. ❌ 忽略代码审查和质量检查（风险高）
+4. ❌ 省略测试和文档（维护难）
+5. ❌ 完全信任 AI 不进行人工审查（不可靠）
+
+---
+
+## 🔗 与其他 SKILL 配合
+
+### 完整开发管道
+
+```bash
+/planning-with-files     # 1. 制定项目计划
+  ↓
+/vibe-coding-team        # 2. Agent 团队协作开发
+  ↓
+/playwright              # 3. 端到端测试
+  ↓
+/obsidian-markdown      # 4. 格式化为笔记
+  ↓
+/docx                   # 5. 生成 Word 文档
+  ↓
+/pdf                    # 6. 导出 PDF
+```
+
+### API 开发管道
+
+```bash
+/vibe-coding-team        # 1. 开发 API
+  ↓
+/playwright              # 2. API 测试
+  ↓
+/obsidian-markdown      # 3. 生成 API 文档
+  ↓
+/docx                   # 4. 导出 API 规范
+```
+
+### 快速原型管道
+
+```bash
+/vibe-coding-team        # 1. 快速开发原型
+  ↓
+/playwright              # 2. 基础功能测试
+  ↓
+/docx                   # 3. 生成使用文档
+```
+
+---
+
+## 🌟 核心特性
+
+- ✅ **自然语言驱动**：用中文描述需求，无需写代码
+- ✅ **专业 Agent 团队**：5 个专业 AI 各司其职，质量有保障
+- ✅ **结构化流程**：四阶段工作流，从需求到交付
+- ✅ **多层质量检查**：架构、代码、测试、文档全方位把控
+- ✅ **快速原型开发**：数小时将想法转化为可运行应用
+- ✅ **完整文档生成**：自动生成 API 文档、架构说明、使用手册
+- ✅ **灵活协作模式**：可与其他 SKILL 配合，构建完整开发流程
+- ✅ **持续更新**：活跃维护和功能迭代
+
+---
+
+## 📈 路线图
+
+### v1.0 (当前版本) ✅
+- ✅ 5 个核心 Agent
+- ✅ 三种使用方式
+- ✅ 完整工作流程
+- ✅ 质量检查机制
+- ✅ 详细文档
+
+### v1.1 (计划中) 🚧
+- ⏳ 添加更多 Agent（Security-Advisor, Performance-Optimizer）
+- ⏳ 支持自定义 Agent 角色
+- ⏳ 优化并行处理逻辑
+- ⏳ 添加项目模板和最佳实践库
+
+### v2.0 (未来) 🔮
+- 🔮 Web UI 控制面板
+- 🔮 项目状态可视化
+- 🔮 自定义工作流程编辑器
+- 🔮 插件系统和扩展机制
+
+---
+
+## 📁 项目结构
+
+```
+vibe-coding-team/
+├── .github/
+│   ├── workflows/          # GitHub Actions 配置
+│   │   └── ci.yml          # 持续集成
+│   ├── ISSUE_TEMPLATE/     # Issue 模板
+│   └── PULL_REQUEST_TEMPLATE.md  # PR 模板
+├── examples/               # 使用示例
+│   ├── quick-start.md
+│   └── advanced_workflows.md
+├── SKILL.md                # SKILL 配置文件（核心）
+├── README.md               # 项目说明（本文件）
+├── README_EN.md            # 英文版说明
+├── QUICK_REFERENCE.md      # 快速参考卡片
+├── CHANGELOG.md            # 更新日志
+├── CONTRIBUTING.md         # 贡献指南
+├── LICENSE                 # MIT 许可证
+└── .gitignore              # Git 忽略配置
+```
+
+---
+
+## 🎯 适用场景
+
+| 场景 | 适合度 | 说明 |
+|------|--------|------|
+| **快速原型开发** | ⭐⭐⭐⭐⭐ | 数小时将想法转化为可运行原型 |
+| **个人工具/脚本** | ⭐⭐⭐⭐⭐ | 完美适合快速实现小工具 |
+| **内部工具/MVP** | ⭐⭐⭐⭐⭐ | 快速验证和迭代 |
+| **概念验证（POC）** | ⭐⭐⭐⭐⭐ | 验证技术可行性 |
+| **学习和技术调研** | ⭐⭐⭐⭐⭐ | 通过对话理解新技术 |
+| **API 开发** | ⭐⭐⭐⭐ | 快速生成 RESTful API |
+| **UI/UX 原型** | ⭐⭐⭐⭐ | 配合 Figma MCP 快速生成界面 |
+| **小型 SaaS 应用** | ⭐⭐⭐ | 适合，但需要适当的架构规划 |
+| **中大型企业应用** | ⭐⭐ | 需要结合传统工程方法 |
+| **高安全性系统** | ⭐ | 不推荐，需要严格的安全审查 |
+
+---
+
+## 🤝 贡献
+
+我们欢迎各种形式的贡献！
+
+### 如何贡献？
+
+1. 🍴 Fork 本仓库
+2. 🌿 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 💾 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 📤 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 🔀 开启 Pull Request
+
+详细指南请查看 [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### 贡献者
+
+感谢所有贡献者！
+
+<a href="https://github.com/yourusername/vibe-coding-team/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yourusername/vibe-coding-team" />
+</a>
+
+---
+
+## 📝 许可证
+
+本项目基于 [MIT License](LICENSE) 开源
+
+```
+Copyright (c) 2026 Vibe Coding Team Community
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+```
+
+---
+
+## 🙏 致谢
+
+- **灵感来源**: [Andrej Karpathy](https://twitter.com/karpathy) - Vibe Coding 理念的提出者
+- **基础架构**: [ai-agent-team](https://github.com/Sunnyeung369/ai-agent-team) - AI Agent 协作框架
+- **Claude Code**: [Anthropic](https://www.anthropic.com) - Claude Code CLI
+- **社区实践**: 所有分享 Vibe Coding 经验的开发者和研究者
+
+---
+
+## 📮 联系方式
+
+- **项目主页**: [https://github.com/yourusername/vibe-coding-team](https://github.com/yourusername/vibe-coding-team)
+- **问题反馈**: [Issues](https://github.com/yourusername/vibe-coding-team/issues)
+- **功能建议**: [Discussions](https://github.com/yourusername/vibe-coding-team/discussions)
+
+---
+
+## 🌟 如果这个项目对你有帮助
+
+请给它一个 ⭐ **Star**！这会让更多人发现这个项目。
+
+也欢迎分享给你的朋友和同事！
+
+---
+
+<div align="center">
+
+**从"如何实现"转向"需要什么"**<br>
+**让 AI 成为你的编码乐手，你成为指挥家**
+
+[⬆ 返回顶部](#-vibe-coding-team-skill) • [📖 文档](#-文档) • [🤝 贡献](#-贡献)
+
+</div>
