@@ -1,7 +1,7 @@
 ---
 name: vibe-coding-team
 version: "1.0.0"
-description: "Vibe Coding AI Agent 协作团队系统 - 通过自然语言驱动，让开发者从'如何实现'转向'需要什么'。模拟指挥家与乐手的协作模式，通过 5 个专业 AI Agent 协作完成从需求到部署的完整开发流程。核心 Agent: vibe-architect(架构指挥官), vibe-coder(编码乐手), vibe-reviewer(质量守门人), vibe-debugger(调试专家), vibe-documenter(文档生成器)。支持 Vibe Coding 四阶段工作流（创意 → 生成 → 调试 → 审查）、并行开发、质量门控等高级协作模式。触发词: 'vibe coding', '自然语言编程', 'ai 协作开发', '快速原型', '意图驱动开发'"
+description: "Vibe Coding AI Agent 协作团队系统。5 个专业 Agent 协作完成从需求到部署的完整开发。触发词: vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter, ai team, agent 协作"
 user-invocable: true
 ---
 

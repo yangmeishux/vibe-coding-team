@@ -7,6 +7,47 @@
 
 ---
 
+## [Unreleased]
+
+### 新增 (Added)
+
+- ✨ **Quick Start 指南** - 10 分钟快速上手教程
+  - Part 1: 快速上手（10 分钟立即体验）
+  - Part 2: 深入理解（详细原理和最佳实践）
+- 🎁 **项目示例** - 3 个真实项目示例
+  - 📘 TODO API - 简化版示例，演示 Agent 协作流程
+  - 📗 博客系统 - 完整可运行版本（Node.js + Express + MongoDB）
+  - 📙 任务管理 UI - 前端开发示例（React）
+- 🎬 **视频演示脚本** - 4 个详细的录制脚本
+  - 脚本 1: 项目介绍（3 分钟）
+  - 脚本 2: 快速上手演示（5 分钟）
+  - 脚本 3: 完整项目开发流程（10 分钟）
+  - 脚本 4: 高级功能和最佳实践（15 分钟）
+- 📝 **用户反馈模板** - GitHub Issue 模板，收集用户反馈和建议
+
+### 优化 (Changed)
+
+- ⚡ **优化 SKILL.md 触发词** - 简化描述字段，提高识别准确率
+  - 聚焦核心触发词：vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter
+  - 减少冗余关键词，提升触发准确性
+- 📚 **更新 README.md** - 添加学习资源部分，突出新文档和示例
+- 📁 **优化项目结构** - 添加 examples/quick-start/, examples/project-examples/, examples/resources/ 目录
+
+### 文档 (Documentation)
+
+- 新增 [Quick Start 指南](examples/quick-start/QUICK_START.md)（约 1500 行）
+- 新增 [TODO API 示例](examples/project-examples/todo-api/README.md)（完整工作流程演示）
+- 新增 [博客系统示例](examples/project-examples/blog-system/)（完整可运行项目）
+  - 架构设计文档（约 800 行）
+  - 实现指南（约 600 行）
+- 新增 [任务管理 UI 示例](examples/project-examples/task-ui/)（前端开发流程）
+  - 组件实现指南
+  - 工作流程详解
+- 新增 [视频演示脚本](examples/resources/video-demos/demo-scripts.md)（约 1200 行）
+- 新增 [用户反馈模板](.github/ISSUE_TEMPLATE/feedback.md)
+
+---
+
 ## [1.0.0] - 2026-01-26
 
 ### 新增 (Added)

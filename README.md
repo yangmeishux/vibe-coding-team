@@ -161,6 +161,39 @@ claude
 
 ---
 
+## 📚 学习资源
+
+### 🚀 快速上手（推荐新手）
+
+**[10 分钟快速上手指南](examples/quick-start/QUICK_START.md)**
+- Part 1: 10 分钟快速上手（立即体验）
+- Part 2: 深入理解（详细原理）
+
+**[项目示例](examples/project-examples/)**
+- 📘 [TODO API](examples/project-examples/todo-api/README.md) - 简化版，演示工作流程（15-30 分钟）
+- 📗 [博客系统](examples/project-examples/blog-system/README.md) - 完整可运行版本（1-2 小时）
+- 📙 [任务管理 UI](examples/project-examples/task-ui/README.md) - 前端开发示例（1-2 小时）
+
+### 🎬 视频演示
+
+**[视频演示脚本](examples/resources/video-demos/demo-scripts.md)**
+- 脚本 1: 项目介绍（3 分钟）
+- 脚本 2: 快速上手演示（5 分钟）
+- 脚本 3: 完整项目开发流程（10 分钟）
+- 脚本 4: 高级功能和最佳实践（15 分钟）
+
+### 📖 详细文档
+
+- **[使用示例](examples/usage_examples.md)** - 详细的使用示例和场景
+- **[最佳实践](examples/best-practices/)** ⭐ 核心技能
+  - **[Context Engineering 指南](examples/best-practices/context-engineering.md)** - 如何提供高质量上下文
+  - **[Prompt Engineering 指南](examples/best-practices/prompt-engineering.md)** - 如何编写有效提示词
+- **[快速参考卡片](QUICK_REFERENCE.md)** - 常用命令和技巧
+- **[SKILL 配置](SKILL.md)** - Agent 定义和工作流程
+- **[更新日志](CHANGELOG.md)** - 版本历史和变更记录
+
+---
+
 ## 🔥 OpenCode 使用
 
 Vibe Coding Team SKILL 已完美集成到 OpenCode 平台，提供更强大的 AI 协作能力。
@@ -527,10 +560,23 @@ vibe-coding-team/
 │   ├── workflows/          # GitHub Actions 配置
 │   │   └── ci.yml          # 持续集成
 │   ├── ISSUE_TEMPLATE/     # Issue 模板
+│   │   └── feedback.md     # 用户反馈模板
 │   └── PULL_REQUEST_TEMPLATE.md  # PR 模板
-├── examples/               # 使用示例
-│   ├── quick-start.md
-│   └── advanced_workflows.md
+├── examples/               # 使用示例和教程
+│   ├── quick-start/        # 快速上手教程
+│   │   └── QUICK_START.md  # 10 分钟上手指南
+│   ├── best-practices/     # 最佳实践指南 ⭐ NEW
+│   │   ├── context-engineering.md  # Context Engineering 指南
+│   │   ├── prompt-engineering.md   # Prompt Engineering 指南
+│   │   └── README.md
+│   ├── project-examples/   # 项目示例
+│   │   ├── todo-api/       # TODO API (简化版)
+│   │   ├── blog-system/    # 博客系统 (完整版)
+│   │   └── task-ui/        # 任务管理 UI (前端版)
+│   ├── resources/          # 资源文件
+│   │   └── video-demos/    # 视频演示脚本
+│   │       └── demo-scripts.md
+│   └── usage_examples.md   # 使用示例
 ├── SKILL.md                # SKILL 配置文件（核心）
 ├── README.md               # 项目说明（本文件）
 ├── README_EN.md            # 英文版说明
