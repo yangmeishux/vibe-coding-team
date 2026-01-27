@@ -235,16 +235,38 @@
 
 ## 📚 更多资源
 
+### 🎓 学习指南
+
+- **[Quick Start 指南](examples/quick-start/QUICK_START.md)** ⭐ - 10 分钟快速上手
+- **[最佳实践](examples/best-practices/)** 🚀 - 提升核心技能
+  - [Context Engineering](examples/best-practices/context-engineering.md) - 如何提供高质量上下文
+  - [Prompt Engineering](examples/best-practices/prompt-engineering.md) - 如何编写有效提示词
+
+### 💻 项目示例
+
+- **[TODO API](examples/project-examples/todo-api/README.md)** - 简化版示例（15-30 分钟）
+- **[博客系统](examples/project-examples/blog-system/README.md)** - 完整可运行版本（1-2 小时）
+- **[任务管理 UI](examples/project-examples/task-ui/README.md)** - 前端开发示例（1-2 小时）
+
+### 📖 文档
+
 - [完整文档](README.md)
 - [SKILL 配置](SKILL.md)
 - [使用示例](examples/usage_examples.md)
 - [贡献指南](CONTRIBUTING.md)
 - [更新日志](CHANGELOG.md)
 
+### 🤝 社区
+
+- **[反馈模板](.github/ISSUE_TEMPLATE/feedback.md)** - 分享使用体验
+- **[提交到 awesome-claude-skills](SUBMIT_TO_AWESOME.md)** - 帮助推广项目
+- [Issues](https://github.com/yangmeishux/vibe-coding-team/issues) - 报告问题
+- [Discussions](https://github.com/yangmeishux/vibe-coding-team/discussions) - 功能建议
+
 ---
 
-**需要帮助？** 查看 [Issues](https://github.com/yourusername/vibe-coding-team/issues) 或 [Discussions](https://github.com/yourusername/vibe-coding-team/discussions)
+**需要帮助？** 查看 [Issues](https://github.com/yangmeishux/vibe-coding-team/issues) 或 [Discussions](https://github.com/yangmeishux/vibe-coding-team/discussions)
 
 ---
 
-*最后更新: 2026-01-26*
+*最后更新: 2026-01-27*
