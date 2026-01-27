@@ -188,6 +188,7 @@ claude
 - **[最佳实践](examples/best-practices/)** ⭐ 核心技能
   - **[Context Engineering 指南](examples/best-practices/context-engineering.md)** - 如何提供高质量上下文
   - **[Prompt Engineering 指南](examples/best-practices/prompt-engineering.md)** - 如何编写有效提示词
+- **[测试指南](examples/TESTING_GUIDE.md)** 🧪 功能测试报告和验证流程
 - **[快速参考卡片](QUICK_REFERENCE.md)** - 常用命令和技巧
 - **[SKILL 配置](SKILL.md)** - Agent 定义和工作流程
 - **[更新日志](CHANGELOG.md)** - 版本历史和变更记录
