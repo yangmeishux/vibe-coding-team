@@ -9,8 +9,16 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-01-28
+
 ### 新增 (Added)
 
+- 🔒 **Security-Advisor（安全顾问）** - 第 6 个专业 Agent
+  - 识别代码中的安全漏洞
+  - 提供安全加固建议
+  - 审查认证授权机制
+  - 评估数据保护措施
+  - 支持 `[task:security]` 任务分类
 - ✨ **Quick Start 指南** - 10 分钟快速上手教程
   - Part 1: 快速上手（10 分钟立即体验）
   - Part 2: 深入理解（详细原理和最佳实践）
@@ -24,14 +32,20 @@
   - 脚本 3: 完整项目开发流程（10 分钟）
   - 脚本 4: 高级功能和最佳实践（15 分钟）
 - 📝 **用户反馈模板** - GitHub Issue 模板，收集用户反馈和建议
+- 📁 **项目结构模板** - 4 种技术栈的项目模板
+  - Node.js API 模板
+  - Python FastAPI 模板
+  - React Dashboard 模板
+  - Go Microservice 模板
 
 ### 优化 (Changed)
 
 - ⚡ **优化 SKILL.md 触发词** - 简化描述字段，提高识别准确率
-  - 聚焦核心触发词：vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter
+  - 聚焦核心触发词：vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter, security-advisor
   - 减少冗余关键词，提升触发准确性
 - 📚 **更新 README.md** - 添加学习资源部分，突出新文档和示例
-- 📁 **优化项目结构** - 添加 examples/quick-start/, examples/project-examples/, examples/resources/ 目录
+- 📁 **优化项目结构** - 添加 examples/quick-start/, examples/project-examples/, examples/best-practices/, examples/resources/ 目录
+- 🏗️ **新增 AGENTS.md** - AI 助手项目维护指南
 
 ### 文档 (Documentation)
 
@@ -45,6 +59,8 @@
   - 工作流程详解
 - 新增 [视频演示脚本](examples/resources/video-demos/demo-scripts.md)（约 1200 行）
 - 新增 [用户反馈模板](.github/ISSUE_TEMPLATE/feedback.md)
+- 新增 [决策矩阵指南](examples/best-practices/decision-matrix.md)
+- 新增 [项目维护指南](AGENTS.md)
 
 ---
 
@@ -99,12 +115,11 @@
 
 ## 计划中的功能 (Planned)
 
-### [1.1.0] - 计划中
+### [1.2.0] - 计划中
 
 #### 待添加 (To Be Added)
 
 - 🔲 添加更多专业 Agent：
-  - Security-Advisor（安全顾问）
   - Performance-Optimizer（性能优化师）
   - DevOps-Engineer（DevOps 工程师）
 - 🔲 支持自定义 Agent 角色
@@ -139,9 +154,11 @@
 ## 版本历史
 
 - [Unreleased]
+- [1.1.0] - 2026-01-28
 - [1.0.0] - 2026-01-26
 
 ---
 
-[Unreleased]: https://github.com/yourusername/vibe-coding-team/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/yourusername/vibe-coding-team/releases/tag/v1.0.0
+[Unreleased]: https://github.com/yangmeishux/vibe-coding-team/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/yangmeishux/vibe-coding-team/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/yangmeishux/vibe-coding-team/releases/tag/v1.0.0

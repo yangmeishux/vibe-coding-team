@@ -8,7 +8,7 @@
 
 ### 1. 报告 Bug
 
-如果您发现了 bug，请在 [Issues](https://github.com/yourusername/vibe-coding-team/issues) 中提交：
+如果您发现了 bug，请在 [Issues](https://github.com/yangmeishux/vibe-coding-team/issues) 中提交：
 
 - 使用清晰、描述性的标题
 - 在描述中复现 bug 的步骤
@@ -20,7 +20,7 @@
 
 如果您有新功能的想法：
 
-- 先在 [Discussions](https://github.com/yourusername/vibe-coding-team/discussions) 中讨论
+- 先在 [Discussions](https://github.com/yangmeishux/vibe-coding-team/discussions) 中讨论
 - 说明问题的背景和动机
 - 描述您希望的行为
 - 提供示例和用例
@@ -212,8 +212,8 @@ vibe-coding-team/
 1. 查看 [文档](README.md)
 2. 查看 [快速参考](QUICK_REFERENCE.md)
 3. 查看 [使用示例](examples/usage_examples.md)
-4. 在 [Discussions](https://github.com/yourusername/vibe-coding-team/discussions) 中提问
-5. 查看 [Issues](https://github.com/yourusername/vibe-coding-team/issues) 中是否已有类似问题
+4. 在 [Discussions](https://github.com/yangmeishux/vibe-coding-team/discussions) 中提问
+5. 查看 [Issues](https://github.com/yangmeishux/vibe-coding-team/issues) 中是否已有类似问题
 
 ---
 

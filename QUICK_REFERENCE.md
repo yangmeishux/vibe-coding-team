@@ -9,6 +9,7 @@
 | **Vibe Reviewer** | 质量守门人 | 代码审查、安全检查 | `[@vibe-reviewer] 任务描述` |
 | **Vibe Debugger** | 调试专家 | 错误诊断、测试生成 | `[@vibe-debugger] 任务描述` |
 | **Vibe Documenter** | 文档生成器 | 文档生成、API 规范 | `[@vibe-documenter] 任务描述` |
+| **Security-Advisor** | 安全顾问 | 漏洞扫描、安全加固 | `[@security-advisor] 任务描述` |
 
 ---
 
@@ -21,6 +22,7 @@
 | **review** | vibe-reviewer | `[task:review] 任务描述` | 代码审查、安全检查 |
 | **debugging** | vibe-debugger | `[task:debugging] 任务描述` | 错误诊断、测试生成 |
 | **documentation** | vibe-documenter | `[task:documentation] 任务描述` | 文档生成、API 规范 |
+| **security** | security-advisor | `[task:security] 任务描述` | 安全审查、漏洞扫描 |
 | **integration** | vibe-architect | `[task:integration] 任务描述` | 系统集成、部署准备 |
 | **quick** | 任意 Agent | `[task:quick] 任务描述` | 简单快速任务 |
 

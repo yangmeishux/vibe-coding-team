@@ -1,7 +1,7 @@
 ---
 name: vibe-coding-team
-version: "1.0.0"
-description: "Vibe Coding AI Agent 协作团队系统。5 个专业 Agent 协作完成从需求到部署的完整开发。触发词: vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter, ai team, agent 协作"
+version: "1.1.0"
+description: "Vibe Coding AI Agent 协作团队系统。6 个专业 Agent 协作完成从需求到部署的完整开发。触发词: vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter, security-advisor, ai team, agent 协作"
 user-invocable: true
 ---
 
@@ -158,6 +158,33 @@ user-invocable: true
 
 ---
 
+### 🔒 Security-Advisor (安全顾问)
+
+**角色定位**: 安全专家，识别漏洞并提供加固建议
+
+**职责**:
+- 识别代码中的安全漏洞
+- 提供安全加固建议
+- 审查认证授权机制
+- 评估数据保护措施
+- 制定安全编码规范
+- 响应安全事件
+
+**使用场景**:
+- 安全漏洞扫描
+- 认证授权审查
+- 数据安全评估
+- 依赖项安全扫描
+- 安全编码规范制定
+- 渗透测试准备
+
+**调用方式**:
+```
+[@security-advisor] 审查这段代码的安全性
+```
+
+---
+
 ## 任务分类系统
 
 基于 Vibe Coding 工作阶段的自动分类：
@@ -169,6 +196,7 @@ user-invocable: true
 | **review** | vibe-reviewer | vibe-coder | 代码审查、安全检查、性能评估 |
 | **debugging** | vibe-debugger | vibe-coder | 错误诊断、测试生成、问题修复 |
 | **documentation** | vibe-documenter | vibe-architect | 文档生成、API 规范、用户手册 |
+| **security** | security-advisor | vibe-reviewer | 安全审查、漏洞扫描、加固建议 |
 | **integration** | vibe-architect | 所有 Agent | 系统集成、部署准备、最终交付 |
 | **quick** | 任意单个 Agent | 无 | 简单快速任务，单一 Agent 即可 |
 
