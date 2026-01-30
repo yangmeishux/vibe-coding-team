@@ -9,6 +9,89 @@
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-01-30
+
+### 🚀 重大更新 (Major)
+
+- **工程化流程重构** - 从原型工具升级为生产级开发框架
+  - 引入五阶段工程流程: 设计 → 准备 → 实现 → 质量 → 交付
+  - 融合 Superpowers 严格工程实践
+  - 支持隔离开发环境 (Git Worktrees)
+
+- **TDD 强制执行** - 红-绿-重构铁律
+  - 没有失败的测试，不写生产代码
+  - 违反 = 删除代码，重新开始
+
+- **双阶段代码审查** - 规格符合性 + 代码质量
+  - Stage 1: 验证是否按计划实现 (YAGNI 检查)
+  - Stage 2: 代码质量评估 (安全、性能、设计)
+
+- **四级质量门禁** - 逐级验证，不让问题流入下一阶段
+  - Level 1: 设计门禁
+  - Level 2: 计划门禁
+  - Level 3: 代码门禁
+  - Level 4: 集成门禁
+
+### 新增 (Added)
+
+- 📋 **principles.md** - 五大铁律定义文档
+  - 铁律 1: 没有设计验证，不开始编码
+  - 铁律 2: 没有详细计划，不开始实现
+  - 铁律 3: 没有失败的测试，不写生产代码
+  - 铁律 4: 没有根因分析，不尝试修复
+  - 铁律 5: 没有双阶段审查，不标记任务完成
+
+- 🛡️ **quality-gates.md** - 质量门禁系统
+  - 四级门禁检查清单
+  - 审查报告模板
+  - 问题分级标准
+
+- 🔄 **workflows/** - 详细工作流程文档
+  - workflow-overview.md - 流程总览
+  - phase-1-design.md - 设计阶段详细流程
+  - phase-2-preparation.md - 准备阶段详细流程
+  - phase-3-implementation.md - 实现阶段详细流程
+  - phase-4-quality.md - 质量阶段详细流程
+  - phase-5-delivery.md - 交付阶段详细流程
+
+- 🎭 **agents/** - Agent 详细角色定义
+  - vibe-architect.md - 架构指挥官
+  - vibe-coder.md - 编码乐手 (含 TDD 规范)
+  - vibe-reviewer.md - 质量守门人 (含双阶段审查)
+  - vibe-debugger.md - 调试专家 (含四阶段调试)
+  - vibe-documenter.md - 文档生成器
+
+- 📐 **INTEGRATION_PLAN.md** - v2.0 整合改进计划
+  - 与 Skills 库的整合方案
+  - 与 Superpowers 的对应关系
+  - 改进实施路线图
+
+### 优化 (Changed)
+
+- ⚡ **SKILL.md v2.0** - 全面重构
+  - 新增五阶段工程流程
+  - 新增触发词: `[vibe-coding]`, `[vibe-coding:design]`, `[vibe-coding:plan]`, `[vibe-coding:quick]`
+  - 细化 Agent 职责和技能矩阵
+  - 添加 TDD 和双阶段审查规范
+
+- 📚 **README.md 更新** - 反映 v2.0 能力
+  - 添加五大铁律说明
+  - 添加五阶段流程图示
+  - 更新文档索引
+  - 更新项目结构图
+
+### 技术细节 (Technical)
+
+- 整合 Superpowers 技能:
+  - brainstorming (设计阶段)
+  - using-git-worktrees (环境准备)
+  - writing-plans (计划编写)
+  - subagent-driven-development (实现阶段)
+  - test-driven-development (TDD 执行)
+  - finishing-a-development-branch (交付阶段)
+
+---
+
 ## [1.1.0] - 2026-01-28
 
 ### 新增 (Added)

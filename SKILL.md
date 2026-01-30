@@ -1,159 +1,677 @@
 ---
 name: vibe-coding-team
-version: "1.1.0"
-description: "Vibe Coding AI Agent 协作团队系统。6 个专业 Agent 协作完成从需求到部署的完整开发。触发词: vibe coding, vibe-architect, vibe-coder, vibe-reviewer, vibe-debugger, vibe-documenter, security-advisor, ai team, agent 协作"
+version: "2.0.0"
+description: "Vibe Coding AI Agent 协作团队系统 v2.0。基于工程化流程的专业软件开发：设计验证 → 详细计划 → TDD实现 → 双阶段审查 → 质量交付。触发词: vibe-coding, vibe-coding:design, vibe-coding:plan, vibe-architect, @vibe-coder, @vibe-reviewer, @vibe-debugger, @vibe-documenter"
 user-invocable: true
 ---
 
-# Vibe Coding Team SKILL
-
-## 概述
-
-基于 Vibe Coding 理念的 AI Agent 协作系统，让开发者通过自然语言描述意图，由专业 Agent 团队协作完成从需求分析到代码部署的完整开发流程。
+# Vibe Coding Team SKILL v2.0
 
 ## 核心理念
 
-**从"如何实现"转向"需要什么"**：
-- 开发者扮演"指挥家"角色，负责表达意图、把握方向、把控质量
-- AI Agent 扮演"乐手"角色，负责具体执行、专业实现、细节处理
-- 通过自然语言交互，将高层次意图转化为可执行的代码和系统
+### 从"如何实现"转向"需要什么"
 
-**四阶段工作流程**：
-1. **创意阶段**：通过自然语言表达需求和意图
-2. **AI 生成阶段**：AI 翻译意图为功能原型和代码
-3. **调试阶段**：修复问题、优化性能、生成测试
-4. **审查阶段**：质量审查、文档生成、最终交付
+开发者扮演**指挥家**角色，负责表达意图、把控方向、验证质量。
+AI Agent 扮演**乐手**角色，通过严格工程流程完成专业实现。
+
+### 五大铁律 (Iron Laws)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 铁律 1: 没有设计验证，不开始编码                              │
+│ 铁律 2: 没有详细计划，不开始实现                              │
+│ 铁律 3: 没有失败的测试，不写生产代码                          │
+│ 铁律 4: 没有根因分析，不尝试修复                              │
+│ 铁律 5: 没有双阶段审查，不标记任务完成                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+> **Violating the letter of the rules is violating the spirit of the rules.**
 
 ---
 
-## Agent 团队
+## 五阶段工程流程
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│                      VIBE CODING WORKFLOW 2.0                        │
+├──────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Phase 1: 设计        Phase 2: 准备       Phase 3: 实现               │
+│  ┌─────────┐         ┌─────────┐         ┌─────────┐                 │
+│  │ 头脑风暴 │    →    │ 隔离环境 │    →    │ TDD编码 │                 │
+│  │ 方案探索 │         │ 详细计划 │         │ 子代理  │                 │
+│  └─────────┘         └─────────┘         └─────────┘                 │
+│       │                   │                   │                       │
+│       ↓                   ↓                   ↓                       │
+│  设计文档              计划文档              可运行代码                │
+│                                                                       │
+│  Phase 4: 质量        Phase 5: 交付                                   │
+│  ┌─────────┐         ┌─────────┐                                     │
+│  │ 双审 查  │    →    │ 最终整合 │                                     │
+│  │ 全面测试 │         │ 交付归档 │                                     │
+│  └─────────┘         └─────────┘                                     │
+│       │                   │                                          │
+│       ↓                   ↓                                          │
+│  质量报告              生产就绪                                       │
+│                                                                       │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 触发词系统
+
+### 主触发词
+
+| 触发词 | 模式 | 说明 |
+|--------|------|------|
+| `[vibe-coding]` | 完整流程 | 从设计到交付的完整五阶段流程 |
+| `[vibe-coding:design]` | 仅设计 | 只执行 Phase 1: 头脑风暴和设计验证 |
+| `[vibe-coding:plan]` | 仅计划 | 只执行 Phase 2: 基于设计文档创建实施计划 |
+| `[vibe-coding:quick]` | 快速模式 | 跳过部分阶段，适合原型开发 |
+
+### Agent 触发词
+
+| 触发词 | Agent | 用途 |
+|--------|-------|------|
+| `[vibe-architect]` | Vibe Architect | 架构设计、流程协调 |
+| `[@vibe-coder]` | Vibe Coder | 代码实现 (强制 TDD) |
+| `[@vibe-reviewer]` | Vibe Reviewer | 双阶段代码审查 |
+| `[@vibe-debugger]` | Vibe Debugger | 系统化调试 |
+| `[@vibe-documenter]` | Vibe Documenter | 文档生成和维护 |
+| `[@security-advisor]` | Security Advisor | 安全审查 |
+
+### 任务分类触发词
+
+| 触发词 | 类别 | 主要 Agent |
+|--------|------|-----------|
+| `[task:design]` | 设计任务 | vibe-architect |
+| `[task:plan]` | 计划任务 | vibe-architect |
+| `[task:coding]` | 编码任务 | vibe-coder |
+| `[task:review]` | 审查任务 | vibe-reviewer |
+| `[task:debugging]` | 调试任务 | vibe-debugger |
+| `[task:documentation]` | 文档任务 | vibe-documenter |
+| `[task:security]` | 安全任务 | security-advisor |
+
+---
+
+## Phase 1: 设计阶段 (Design Phase)
+
+### 目标
+通过苏格拉底式对话澄清需求，探索多种方案，生成经过验证的设计文档。
+
+### 流程
+
+```
+用户提出需求
+     ↓
+[vibe-architect] 检查现有项目上下文
+     ↓
+逐轮提问澄清 (一次一个问题)
+     ↓
+探索 2-3 种方案及权衡
+     ↓
+增量式展示设计 (200-300字/段)
+     ↓
+用户确认
+     ↓
+生成设计文档 → docs/plans/YYYY-MM-DD-<feature>-design.md
+```
+
+### 设计文档模板
+
+```markdown
+# [Feature Name] Design
+
+> **Status**: [Draft/Review/Approved]
+> **Date**: YYYY-MM-DD
+> **Author**: vibe-architect
+
+## Goal
+一句话描述目标
+
+## Architecture
+2-3句话描述架构方案
+
+## Key Decisions
+| 决策 | 选项 | 选择 | 理由 |
+|------|------|------|------|
+
+## Components
+- Component A: 职责、接口
+- Component B: 职责、接口
+
+## Data Flow
+```
+[输入] → [处理] → [输出]
+```
+
+## Error Handling
+- 错误场景1: 处理方式
+- 错误场景2: 处理方式
+
+## Testing Strategy
+- 单元测试覆盖点
+- 集成测试场景
+
+## Open Questions
+- [ ] 待确认问题1
+- [ ] 待确认问题2
+```
+
+### 质量门禁
+
+- [ ] 需求澄清完成 (至少3轮问答)
+- [ ] 2-3种方案已探索并对比
+- [ ] 架构图或组件图已绘制
+- [ ] 边界情况和错误处理已考虑
+- [ ] 用户已确认设计
+
+---
+
+## Phase 2: 准备阶段 (Preparation Phase)
+
+### 目标
+创建隔离开发环境，生成详细可执行的实施计划。
+
+### 子阶段 2a: 环境准备
+
+```bash
+[vibe-architect] 激活 using-git-worktrees 技能
+
+1. 检测项目类型 (Node.js/Python/Rust/Go)
+2. 创建隔离工作区 (.worktrees/<branch-name>)
+3. 运行项目设置 (npm install / pip install / cargo build)
+4. 验证干净基线 (所有现有测试通过)
+5. 报告: 工作区就绪，测试通过 X 个
+```
+
+### 子阶段 2b: 计划编写
+
+```bash
+[vibe-architect] 激活 writing-plans 技能
+
+基于设计文档，生成实施计划:
+- docs/plans/YYYY-MM-DD-<feature>-plan.md
+```
+
+### 计划文档结构
+
+```markdown
+# [Feature Name] Implementation Plan
+
+> **For Claude**: REQUIRED SUB-SKILL: Use subagent-driven-development
+> **Based on**: [link to design doc]
+> **Goal**: [One sentence]
+> **Architecture**: [2-3 sentences]
+
+## Task 1: [Component Name]
+
+**Files:**
+- Create: `exact/path/to/file.py`
+- Modify: `exact/path/to/existing.py:123-145`
+- Test: `tests/path/to/test_file.py`
+
+**Context:**
+[Scene-setting context for implementer]
+
+**Steps:**
+
+### Step 1: Write failing test
+```python
+def test_specific_behavior():
+    result = function(input)
+    assert result == expected
+```
+
+### Step 2: Verify test fails
+Run: `pytest tests/path/test.py::test_name -v`
+Expected: FAIL with "function not defined"
+
+### Step 3: Write minimal implementation
+```python
+def function(input):
+    return expected
+```
+
+### Step 4: Verify test passes
+Run: `pytest tests/path/test.py::test_name -v`
+Expected: PASS
+
+### Step 5: Refactor (if needed)
+[What to clean up]
+
+### Step 6: Commit
+```bash
+git add tests/path/test.py src/path/file.py
+git commit -m "feat: add specific feature"
+```
+
+## Task 2: [Next Component]
+...
+```
+
+### 任务粒度要求
+
+**每个任务 2-5 分钟完成:**
+- ✅ "Write failing test for email validation"
+- ✅ "Run test to confirm it fails"
+- ✅ "Implement minimal email regex"
+- ❌ "Implement authentication system" (太大)
+- ❌ "Add validation" (太模糊)
+
+### 质量门禁
+
+- [ ] 任务粒度符合 2-5 分钟标准
+- [ ] 每个任务有精确文件路径
+- [ ] 每个任务有完整代码示例
+- [ ] 每个任务有验证命令和预期输出
+- [ ] 任务间依赖关系清晰
+
+---
+
+## Phase 3: 实现阶段 (Implementation Phase)
+
+### 目标
+通过子代理驱动或计划执行，完成所有任务的编码实现。
+
+### 模式 A: 子代理驱动 (推荐用于当前会话)
+
+```bash
+[vibe-architect] 激活 subagent-driven-development 技能
+
+核心原则: Fresh subagent per task + two-stage review
+
+每个任务循环:
+1. 派遣实现子代理 (完整任务上下文)
+   ├─ 子代理可提问澄清
+   ├─ 严格遵循 TDD: 红→绿→重构
+   └─ 自审查后提交
+   
+2. 派遣规格审查子代理
+   ├─ 对比计划验证实现完整性
+   ├─ 检查是否过度实现 (YAGNI)
+   └─ 返回: ✅ 通过 或 ❌ 问题列表
+   
+3. 如有问题 → 实现子代理修复 → 重新审查
+
+4. 派遣代码质量审查子代理
+   ├─ 测试覆盖率
+   ├─ 代码风格和最佳实践
+   ├─ 安全扫描
+   └─ 返回: ✅ 通过 或 ❌ 问题列表
+   
+5. 如有问题 → 实现子代理修复 → 重新审查
+
+6. 标记任务完成 → 下一个任务
+```
+
+### 模式 B: 计划执行 (推荐用于大项目)
+
+```bash
+在新会话中:
+[vibe-architect] 激活 executing-plans 技能
+
+- 批量执行任务
+- 人工检查点
+- 适合长时间运行
+```
+
+### TDD 铁律 (强制)
+
+```
+┌────────────────────────────────────────────────────┐
+│                 TDD CYCLE                          │
+│                                                    │
+│   ┌─────┐      ┌─────────┐      ┌─────┐          │
+│   │ RED │  →   │ VERIFY  │  →   │GREEN│          │
+│   │写测试│      │ 看失败   │      │最小代码│          │
+│   └─────┘      └─────────┘      └─────┘          │
+│      ↑                              │             │
+│      └──────────┬───────────────────┘             │
+│                 ↓                                  │
+│            ┌─────────┐      ┌────────┐           │
+│            │ VERIFY  │  →   │REFACTOR│           │
+│            │ 看通过   │      │  重构   │           │
+│            └─────────┘      └────────┘           │
+│                                                    │
+│   NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST │
+└────────────────────────────────────────────────────┘
+```
+
+**红阶段要求:**
+- 测试名称清晰描述行为
+- 测试一个行为 (有"and"就拆分)
+- 使用真实代码 (避免 mock)
+- 运行确认失败，且失败原因正确
+
+**绿阶段要求:**
+- 最小代码通过测试
+- 不添加"以后会用到"的功能
+- 不重构其他代码
+
+**重构阶段要求:**
+- 仅在测试通过后进行
+- 消除重复
+- 改进命名
+- 保持测试绿色
+
+### 质量门禁
+
+- [ ] 每个新功能先有失败的测试
+- [ ] 每次提交前所有测试通过
+- [ ] 输出无 error/warning
+- [ ] 规格审查通过
+- [ ] 代码质量审查通过
+
+---
+
+## Phase 4: 质量阶段 (Quality Phase)
+
+### 目标
+全面验证实现质量，确保符合标准。
+
+### 子阶段 4a: 最终代码审查
+
+```bash
+[@vibe-reviewer] 执行最终审查
+
+1. 计划对齐分析
+   - 对比实现 vs 原始计划
+   - 识别偏离项及理由
+   - 验证所有功能已实现
+
+2. 代码质量评估
+   - 代码风格和规范
+   - 错误处理和类型安全
+   - 测试覆盖和质量
+
+3. 架构和设计审查
+   - SOLID 原则遵循
+   - 关注点分离
+   - 可扩展性考虑
+
+4. 文档和标准
+   - 代码注释完整性
+   - 文档同步更新
+
+输出: 审查报告 (Critical/Important/Suggestions)
+```
+
+### 子阶段 4b: 系统化测试
+
+```bash
+[@vibe-debugger] 执行系统化测试
+
+1. 完整测试套件
+   npm test / cargo test / pytest
+
+2. 边界条件测试
+   - 空值处理
+   - 极值测试
+   - 并发场景
+
+3. 性能基准
+   - 响应时间
+   - 内存使用
+
+输出: 测试报告
+```
+
+### 子阶段 4c: 文档同步
+
+```bash
+[@vibe-documenter] 同步文档
+
+1. API 文档生成
+2. 架构决策记录更新
+3. 使用手册编写
+4. README 更新
+
+输出: 文档更新确认
+```
+
+### 质量门禁
+
+- [ ] 最终代码审查通过
+- [ ] 所有测试通过 (100%)
+- [ ] 边界条件覆盖
+- [ ] 性能基准达标
+- [ ] 文档已同步
+
+---
+
+## Phase 5: 交付阶段 (Delivery Phase)
+
+### 目标
+完成最终整合，交付生产就绪的代码。
+
+### 流程
+
+```bash
+[vibe-architect] 激活 finishing-a-development-branch 技能
+
+1. 验证所有任务完成
+2. 最终测试确认
+3. 提供交付选项:
+   
+   Option A: 合并到主分支
+   Option B: 创建 Pull Request
+   Option C: 保留分支继续开发
+   Option D: 废弃此工作区
+
+4. 根据选择执行:
+   - 合并: git merge --no-ff
+   - PR: 生成 PR 描述
+   - 保留: 记录分支状态
+   - 废弃: 清理工作区
+
+5. 生成交付报告:
+   - 完成的功能列表
+   - 测试统计
+   - 文档链接
+   - 已知限制
+```
+
+---
+
+## Agent 详细定义
 
 ### 🎨 Vibe Architect (架构指挥官)
 
-**角色定位**: 指挥家，把握整体方向和架构决策
+**角色定位**: 指挥家，把控整体方向和流程协调
 
-**职责**:
-- 理解高层次需求和业务目标
-- 设计系统架构和技术栈选择
-- 定义模块划分和接口规范
-- 设置质量门控和约束条件
-- 协调其他 Agent 的工作
-- 整合最终输出并质量把控
+**核心职责:**
+1. **设计阶段**: 需求澄清、方案探索、设计验证
+2. **准备阶段**: 环境隔离、计划生成
+3. **协调阶段**: 管理五阶段流程，分配任务
+4. **交付阶段**: 最终整合、质量把控
 
-**使用场景**:
-- 项目启动和需求分析
-- 架构设计和技术选型
-- 多 Agent 任务协调
-- 关键决策和质量把控
-- 最终交付和整合
+**技能矩阵:**
+| 场景 | 激活技能 |
+|------|----------|
+| 需求分析 | brainstorming |
+| 环境准备 | using-git-worktrees |
+| 计划编写 | writing-plans |
+| 实现协调 | subagent-driven-development |
+| 交付收尾 | finishing-a-development-branch |
 
-**调用方式**:
-```
-[vibe-architect] 我需要为电商平台设计一个用户认证系统，支持 JWT 和 OAuth2
+**调用方式:**
+```bash
+# 完整流程
+[vibe-coding] 开发一个用户管理系统
+
+# 仅设计
+[vibe-coding:design] 设计一个电商平台架构
+
+# 从设计文档开始
+[vibe-coding:plan] 基于 docs/plans/xxx-design.md 创建计划
 ```
 
 ---
 
 ### 🎹 Vibe Coder (编码乐手)
 
-**角色定位**: 编码乐手，专注代码生成和功能实现
+**角色定位**: 专注代码生成和功能实现，严格遵守 TDD
 
-**职责**:
-- 根据架构规格生成具体代码
-- 实现算法和业务逻辑
-- 处理细节和边界情况
-- 遵循架构约束和编码规范
-- 应用设计模式和最佳实践
-- 生成初步的单元测试
+**核心职责:**
+1. **测试先行**: 红→绿→重构循环
+2. **最小实现**: YAGNI 原则，不多不少
+3. **频繁提交**: 每个小步骤都提交
+4. **技术专精**: 前端/后端/数据库最佳实践
 
-**使用场景**:
-- 功能模块代码生成
-- API 端点实现
-- 数据模型和迁移
-- 业务逻辑实现
-- 代码重构和优化
+**技术专精:**
 
-**调用方式**:
+**前端:**
+- 组件分层: Page → Container → Component → Base
+- 状态管理: Redux, Zustand, Pinia, TanStack Query
+- 样式: Tailwind, CSS Modules, Styled Components
+- 测试: React Testing Library, Vitest
+
+**后端:**
+- 分层架构: Controller → Service → Repository → Database
+- API 设计: RESTful, GraphQL
+- 框架: Express, NestJS, FastAPI, Django
+- 数据库: PostgreSQL, MongoDB, Redis
+
+**TDD 铁律:**
 ```
-[@vibe-coder] 基于上面的架构设计，实现用户登录和注册的 API 端点
+NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
+
+违反 = 删除代码，重新开始
+```
+
+**调用方式:**
+```bash
+# 单个任务
+[@vibe-coder] 实现用户登录接口 (遵循 TDD)
+
+# 批量任务 (由 architect 协调)
+[vibe-architect] 协调 vibe-coder 完成: 
+  - Task 1: 实现数据模型
+  - Task 2: 实现 API 端点
 ```
 
 ---
 
 ### 🔍 Vibe Reviewer (质量守门人)
 
-**角色定位**: 质量守门人，确保代码质量和安全性
+**角色定位**: 确保代码质量和规格符合性
 
-**职责**:
-- 审查 AI 生成的代码
-- 检查安全漏洞和潜在风险
-- 评估性能和可维护性
-- 确保符合最佳实践
-- 提供改进建议和优化方向
-- 验证架构合规性
+**核心职责:**
+1. **规格符合性审查**: 对比计划验证实现
+2. **代码质量审查**: 风格、安全、性能、测试覆盖
+3. **问题分级**: Critical / Important / Suggestion
+4. **改进建议**: 具体、可操作的反馈
 
-**使用场景**:
-- 代码质量审查
-- 安全漏洞检测
-- 性能优化评估
-- 技术债务识别
-- 代码风格一致性检查
+**双阶段审查:**
 
-**调用方式**:
+**阶段 1: 规格符合性 (Spec Compliance)**
 ```
-[@vibe-reviewer] 审查这段代码的安全性、性能和可维护性
+□ 实现了计划中的所有要求？
+□ 没有过度实现 (YAGNI)？
+□ 边界情况已处理？
+□ 错误处理完整？
+```
+
+**阶段 2: 代码质量 (Code Quality)**
+```
+□ 测试覆盖充分？
+□ 代码风格一致？
+□ 安全漏洞扫描通过？
+□ 性能影响可接受？
+□ SOLID 原则遵循？
+```
+
+**调用方式:**
+```bash
+# 双阶段审查
+[@vibe-reviewer] 审查这段代码的规格符合性和代码质量
+
+# 特定阶段
+[@vibe-reviewer:spec] 检查是否按计划实现
+[@vibe-reviewer:quality] 检查代码质量和测试覆盖
 ```
 
 ---
 
 ### 🐛 Vibe Debugger (调试专家)
 
-**角色定位**: 调试专家，诊断和修复问题
+**角色定位**: 系统化诊断和修复问题
 
-**职责**:
-- 分析错误日志和异常信息
-- 定位问题根源和根本原因
-- 提供修复方案和优化建议
-- 生成全面的测试用例
-- 处理边缘情况和边界条件
-- 验证修复效果
+**核心职责:**
+1. **根因分析**: 四阶段系统化调试
+2. **测试生成**: 为 Bug 创建失败测试
+3. **修复验证**: 确保修复有效且不引入新问题
+4. **防御强化**: 添加多层验证防止复发
 
-**使用场景**:
-- 错误诊断和修复
-- 测试用例生成
-- 性能问题排查
-- 集成测试调试
-- 生产环境问题分析
+**系统化调试四阶段:**
 
-**调用方式**:
+**Phase 1: 根因调查**
+- 仔细阅读错误信息
+- 稳定复现问题
+- 检查近期变更
+- 追踪数据流
+
+**Phase 2: 模式分析**
+- 寻找类似的成功代码
+- 对比参考实现
+- 识别差异点
+
+**Phase 3: 假设验证**
+- 形成单一假设
+- 最小化测试
+- 验证或形成新假设
+
+**Phase 4: 实施修复**
+- 创建失败测试 (TDD)
+- 实施单一修复
+- 验证修复有效
+
+**铁律:**
 ```
-[@vibe-debugger] 分析这个错误并生成修复方案和测试用例
+NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST
+
+3+ failed fixes = Question the architecture
+```
+
+**调用方式:**
+```bash
+# 完整调试流程
+[@vibe-debugger] 分析这个错误并提供修复方案
+
+# 特定阶段
+[@vibe-debugger:investigate] 调查问题根因
+[@vibe-debugger:fix] 基于根因实施修复
 ```
 
 ---
 
 ### 📚 Vibe Documenter (文档生成器)
 
-**角色定位**: 文档生成器，维护技术文档和知识库
+**角色定位**: 维护技术文档和知识库
 
-**职责**:
-- 自动生成代码文档
-- 创建 API 规范和使用说明
-- 维护架构文档和技术决策记录
-- 生成用户手册和教程
-- 保持文档与代码同步
-- 提供代码示例和最佳实践
+**核心职责:**
+1. **API 文档**: 自动生成和维护
+2. **架构文档**: 设计决策记录 (ADR)
+3. **使用手册**: 用户指南和教程
+4. **文档同步**: 确保文档与代码一致
 
-**使用场景**:
-- API 文档生成
-- 架构文档维护
-- 用户手册编写
-- 技术决策记录
-- 代码注释和说明
+**文档类型:**
+- Design Docs: 架构设计
+- Plan Docs: 实施计划
+- API Docs: 接口规范
+- ADRs: 架构决策记录
+- User Guides: 使用手册
 
-**调用方式**:
-```
-[@vibe-documenter] 为这段代码生成 API 文档和使用示例
+**调用方式:**
+```bash
+# 生成 API 文档
+[@vibe-documenter] 为这段代码生成 API 文档
+
+# 更新架构决策记录
+[@vibe-documenter] 记录本次技术选型决策
 ```
 
 ---
@@ -162,24 +680,14 @@ user-invocable: true
 
 **角色定位**: 安全专家，识别漏洞并提供加固建议
 
-**职责**:
-- 识别代码中的安全漏洞
-- 提供安全加固建议
-- 审查认证授权机制
-- 评估数据保护措施
-- 制定安全编码规范
-- 响应安全事件
+**核心职责:**
+1. **漏洞扫描**: 代码安全审查
+2. **认证授权**: 审查 Auth 机制
+3. **数据保护**: 敏感数据处理
+4. **安全规范**: 制定编码规范
 
-**使用场景**:
-- 安全漏洞扫描
-- 认证授权审查
-- 数据安全评估
-- 依赖项安全扫描
-- 安全编码规范制定
-- 渗透测试准备
-
-**调用方式**:
-```
+**调用方式:**
+```bash
 [@security-advisor] 审查这段代码的安全性
 ```
 
@@ -187,462 +695,160 @@ user-invocable: true
 
 ## 任务分类系统
 
-基于 Vibe Coding 工作阶段的自动分类：
-
-| 任务类别 | 主要 Agent | 辅助 Agent | 典型场景 |
-|---------|-----------|-----------|---------|
-| **planning** | vibe-architect | vibe-coder | 需求分析、架构设计、技术选型 |
-| **coding** | vibe-coder | vibe-architect | 代码生成、功能实现、API 开发 |
-| **review** | vibe-reviewer | vibe-coder | 代码审查、安全检查、性能评估 |
-| **debugging** | vibe-debugger | vibe-coder | 错误诊断、测试生成、问题修复 |
-| **documentation** | vibe-documenter | vibe-architect | 文档生成、API 规范、用户手册 |
-| **security** | security-advisor | vibe-reviewer | 安全审查、漏洞扫描、加固建议 |
-| **integration** | vibe-architect | 所有 Agent | 系统集成、部署准备、最终交付 |
-| **quick** | 任意单个 Agent | 无 | 简单快速任务，单一 Agent 即可 |
+| 任务类别 | 触发词 | 主要 Agent | 辅助 Agent | 场景 |
+|---------|--------|-----------|-----------|------|
+| **design** | `[task:design]` | vibe-architect | - | 需求分析、架构设计 |
+| **plan** | `[task:plan]` | vibe-architect | - | 实施计划编写 |
+| **coding** | `[task:coding]` | vibe-coder | vibe-architect | 代码实现 |
+| **review** | `[task:review]` | vibe-reviewer | vibe-coder | 代码审查 |
+| **debugging** | `[task:debugging]` | vibe-debugger | vibe-coder | 问题调试 |
+| **documentation** | `[task:documentation]` | vibe-documenter | vibe-architect | 文档生成 |
+| **security** | `[task:security]` | security-advisor | vibe-reviewer | 安全审查 |
+| **quick** | `[vibe-coding:quick]` | 任意 | - | 快速原型 |
 
 ---
 
-## 典型工作流程
+## 质量门禁汇总
 
-### 1. 完整的 Vibe Coding 流程
+### Level 1: 设计门禁
+- [ ] 需求澄清完成 (≥3轮问答)
+- [ ] 2-3种方案已探索
+- [ ] 架构图已绘制
+- [ ] 边界情况已考虑
+- [ ] 用户已确认
 
-```
-[vibe-architect] 接收自然语言需求
-    ↓
-    理解需求、设计架构、选择技术栈
-    ↓
-    生成架构文档和设计规格
-    ↓
-[@vibe-coder] 根据规格生成代码（可并行处理多个模块）
-    ↓
-    实现功能、编写初步测试
-    ↓
-[@vibe-reviewer] 审查代码质量、安全性、性能
-    ↓
-    生成审查报告、提供改进建议
-    ↓
-[@vibe-debugger] 诊断错误、生成测试用例
-    ↓
-    修复问题、优化性能
-    ↓
-[@vibe-documenter] 生成文档和 API 规范
-    ↓
-    创建 API 文档、用户手册、架构说明
-    ↓
-[vibe-architect] 最终整合和质量把控
-    ↓
-    验证完整性、确保质量标准
-    ↓
-交付：代码 + 测试 + 文档
-```
+### Level 2: 计划门禁
+- [ ] 任务粒度 2-5 分钟
+- [ ] 精确文件路径
+- [ ] 完整代码示例
+- [ ] 验证命令明确
 
-### 2. 快速原型开发流程
+### Level 3: 代码门禁
+- [ ] 先写测试并看失败
+- [ ] 最小实现通过测试
+- [ ] 所有测试通过
+- [ ] 无 error/warning
+- [ ] 规格审查通过
+- [ ] 质量审查通过
 
-```
-[vibe-architect] 快速需求分析
-    ↓
-    定义核心功能和技术栈
-    ↓
-[@vibe-coder] 快速生成核心代码
-    ↓
-    实现最小可行产品（MVP）
-    ↓
-[@vibe-debugger] 生成基础测试
-    ↓
-    确保核心功能可用
-    ↓
-[vibe-architect] 快速交付
-```
+### Level 4: 集成门禁
+- [ ] 最终代码审查通过
+- [ ] 完整测试套件通过
+- [ ] 边界条件覆盖
+- [ ] 性能基准达标
+- [ ] 文档已同步
 
-### 3. 迭代优化流程
+---
 
-```
-[vibe-architect] 启动迭代优化
-    ↓
-Round 1: [@vibe-coder] 生成初稿
-    ↓ (质量检查1)
-Round 2: [@vibe-reviewer] 深度审查
-    ↓ (质量检查2)
-Round 3: [@vibe-debugger] 全面测试
-    ↓ (质量检查3)
-Round 4: [@vibe-documenter] 完善文档
-    ↓
-[vibe-architect] 最终优化输出
-```
+## 技术规范参考
 
-### 4. 并行开发流程
+> 详细技术规范文档位于 `tech-specs/` 目录
 
-```
-[vibe-architect] 设计并行任务
-    ├─ Task 1: [@vibe-coder] + [@vibe-debugger] → 模块 A 开发
-    ├─ Task 2: [@vibe-coder] + [@vibe-debugger] → 模块 B 开发
-    └─ Task 3: [@vibe-coder] + [@vibe-debugger] → 模块 C 开发
-    ↓
-[@vibe-reviewer] 统一审查所有模块
-    ↓
-[vibe-architect] 整合所有模块并测试
+### 设计规范
+- **[设计系统](tech-specs/design-system.md)** - 色彩、间距、字体、组件规范
+- **[API 规范](tech-specs/api-guidelines.md)** - RESTful API 设计规范
+
+### 开发规范
+- **[代码规范](tech-specs/code-standards.md)** - 命名、风格、最佳实践
+- **[数据库规范](tech-specs/database-guidelines.md)** - 设计、索引、查询
+- **[安全规范](tech-specs/security-guidelines.md)** - 安全编码、漏洞防护
+- **[测试规范](tech-specs/testing-guidelines.md)** - 测试策略、TDD 实践
+
+### 使用示例
+```bash
+[@vibe-coder] 实现登录页面，遵循 [设计系统规范](tech-specs/design-system.md)
+[@vibe-coder] 设计 API 接口，遵循 [API 规范](tech-specs/api-guidelines.md)
+[@vibe-reviewer] 检查代码是否符合 [代码规范](tech-specs/code-standards.md)
+[@security-advisor] 审查安全性，参考 [安全规范](tech-specs/security-guidelines.md)
 ```
 
 ---
 
-## 使用指南
+## 工作流程选择指南
 
-### 基本用法
-
-#### 方式一：让架构师协调（推荐用于复杂项目）
-
+### 场景 1: 完整项目开发
 ```bash
-# 完整的项目开发
-[vibe-architect] 我需要开发一个简单的博客系统，支持：
-  - 用户注册和登录（JWT 认证）
-  - 文章的创建、编辑、删除
-  - 评论功能
-  - 标签和分类
-  请协调团队完成开发
-
-# vibe-architect 会自动：
-# 1. 分析需求，设计架构
-# 2. 定义模块和接口
-# 3. 协调其他 Agent 并行开发
-# 4. 设置质量检查点
-# 5. 整合最终输出
+[vibe-coding] 我需要开发一个任务管理系统...
 ```
+**流程**: 五阶段完整流程
+**时间**: 2-4 小时
+**产出**: 生产就绪代码 + 完整文档
 
-#### 方式二：指定特定 Agent（推荐用于单一任务）
-
+### 场景 2: 快速原型
 ```bash
-# 需求分析
-[vibe-architect] 设计一个 RESTful API 的用户认证系统
-
-# 代码生成
-[@vibe-coder] 实现用户登录和注册的 API 端点
-
-# 代码审查
-[@vibe-reviewer] 审查这段代码的安全性和性能
-
-# 调试和测试
-[@vibe-debugger] 为这个功能生成单元测试和集成测试
-
-# 文档生成
-[@vibe-documenter] 生成 API 文档和使用示例
+[vibe-coding:quick] 快速做一个原型验证想法...
 ```
+**流程**: Phase 1 → Phase 3 (简化)
+**时间**: 30-60 分钟
+**产出**: 可运行原型
 
-#### 方式三：使用任务分类（快速模式）
-
+### 场景 3: 单一功能
 ```bash
-# 规划任务
-[task:planning] 设计一个电商平台的后端架构
-
-# 编码任务
-[task:coding] 实现购物车功能
-
-# 审查任务
-[task:review] 检查订单处理代码的安全性
-
-# 调试任务
-[task:debugging] 修复支付接口的错误并生成测试
-
-# 文档任务
-[task:documentation] 生成支付 API 的文档
+[vibe-coding:design] 设计一个用户认证模块
+[vibe-coding:plan] 基于设计创建计划
+[@vibe-coder] 实现登录功能
+[@vibe-reviewer] 审查代码
 ```
+**流程**: 按需调用特定 Agent
+**时间**: 30-60 分钟
+**产出**: 单一功能模块
+
+### 场景 4: Bug 修复
+```bash
+[@vibe-debugger] 分析并修复这个错误
+```
+**流程**: 系统化调试四阶段
+**时间**: 15-45 分钟
+**产出**: 修复 + 测试用例
 
 ---
 
-## 高级功能
+## 与其他 SKILL 协作
 
-### 1. 质量检查点
-
-在关键节点设置质量检查，确保交付质量：
-
+### 完整开发管道
 ```bash
-[vibe-architect] 设置质量检查点：
-  - 架构阶段：确保设计合理和技术栈合适
-  - 编码阶段：确保代码质量和规范
-  - 审查阶段：确保安全性和性能达标
-  - 测试阶段：确保测试覆盖充分
-  - 文档阶段：确保文档完整准确
-```
-
-### 2. 并行处理
-
-对于可以并行执行的独立任务，vibe-architect 会协调多个 Agent 同时工作：
-
-```bash
-[vibe-architect] 我需要并行完成以下任务：
-  - 开发用户认证模块（coder + debugger）
-  - 开发商品管理模块（coder + debugger）
-  - 开发订单处理模块（coder + debugger）
-  请协调团队并行完成
-```
-
-### 3. 迭代优化
-
-支持多轮迭代，持续改进代码质量：
-
-```bash
-[vibe-architect] 启动三轮优化流程：
-  Round 1: coder 生成初稿
-  Round 2: reviewer 深度审查
-  Round 3: debugger 全面测试
-  直到达到质量标准
-```
-
-### 4. Agent 投票机制
-
-对于技术方案有争议时，采用多 Agent 投票：
-
-```bash
-[vibe-architect] 这个技术方案有争议
-  请 reviewer, debugger, architect
-  分别评估并提供意见
-  综合分析后做出决策
-```
-
----
-
-## 最佳实践
-
-### ✅ DO (推荐做法)
-
-1. **明确意图和需求**
-   ```bash
-   ❌ [vibe-architect] 做个博客
-   ✅ [vibe-architect] 设计一个博客系统，支持用户认证、文章管理、评论功能，
-     使用 Node.js + Express + MongoDB，需要 RESTful API
-   ```
-
-2. **合理选择 Agent**
-   ```bash
-   简单任务 → 直接指定单个 Agent
-   复杂项目 → 让 vibe-architect 协调团队
-   快速原型 → 使用 [task:category] 快速模式
-   ```
-
-3. **遵循工作流程**
-   ```
-   架构先行（architect → coder）
-   审查跟进（reviewer）
-   测试保障（debugger）
-   文档完善（documenter）
-   ```
-
-4. **提供具体反馈**
-   ```bash
-   ✅ [@vibe-reviewer] 这段代码存在 SQL 注入风险，需要使用参数化查询
-   ✅ [@vibe-coder] 这个 API 响应格式不符合 RESTful 规范，需要调整
-   ```
-
-### ❌ DON'T (避免做法)
-
-1. ❌ 对简单任务使用全部 Agent（效率低）
-2. ❌ 跳过架构设计直接编码（技术债务）
-3. ❌ 忽略代码审查和质量检查（风险高）
-4. ❌ 省略测试和文档（维护难）
-5. ❌ 完全信任 AI 不进行人工审查（不可靠）
-
----
-
-## 示例场景
-
-### 场景 1: 快速原型开发
-
-```bash
-# 用户: [vibe-architect] 我想快速开发一个简单的任务管理应用，
-#       支持创建、编辑、删除任务，使用 React + Node.js + MongoDB
-
-# vibe-architect 会协调：
-1. 分析需求，设计架构
-2. 定义数据模型和 API 接口
-3. [coder] 生成后端代码
-4. [coder] 生成前端代码
-5. [debugger] 生成测试用例
-6. [reviewer] 审查代码质量
-7. [documenter] 生成使用文档
-
-# 预计时间：2-3 小时
-# 产出：可运行的任务管理应用原型 + 测试 + 文档
-```
-
-### 场景 2: API 开发
-
-```bash
-# 用户: [task:planning] 设计一个电商平台的商品管理 API
-#       [task:coding] 实现商品 CRUD 接口
-#       [task:review] 检查 API 的安全性和性能
-#       [task:documentation] 生成 API 文档
-
-# 产出：完整的商品管理 API + 安全审查 + 性能评估 + API 文档
-```
-
-### 场景 3: Bug 修复
-
-```bash
-# 用户: [task:debugging] 这个登录接口总是返回 500 错误，
-#       请分析问题并提供修复方案
-
-# vibe-debugger 会：
-1. 分析错误日志和堆栈跟踪
-2. 定位问题根源
-3. 提供修复方案
-4. 生成测试用例
-5. 验证修复效果
-```
-
-### 场景 4: 代码重构
-
-```bash
-# 用户: [@vibe-reviewer] 这段代码可读性差，性能也有问题，
-#       请提供重构建议
-
-# vibe-reviewer 会：
-1. 分析代码结构和性能瓶颈
-2. 识别代码异味和技术债务
-3. 提供重构方案和最佳实践
-4. 确保重构不破坏现有功能
-```
-
----
-
-## 与其他 SKILL 的协作
-
-### 推荐组合
-
-1. **+ playwright**
-   ```bash
-   [vibe-architect] 开发 Web 应用
-     ↓
-   [@vibe-coder] 实现功能
-     ↓
-   [playwright] 进行端到端测试
-   ```
-
-2. **+ obsidian-markdown**
-   ```bash
-   [vibe-architect] 开发项目
-     ↓
-   [@vibe-documenter] 生成文档
-     ↓
-   [obsidian-markdown] 格式化为 Obsidian 笔记
-   ```
-
-3. **+ docx / pdf**
-   ```bash
-   [vibe-architect] 完成项目开发
-     ↓
-   [@vibe-documenter] 生成完整文档
-     ↓
-   [docx] 生成 Word 文档
-     ↓
-   [pdf] 导出 PDF 版本
-   ```
-
-4. **+ planning-with-files**
-   ```bash
-   [planning-with-files] 制定项目计划
-     ↓
-   [vibe-architect] 执行开发任务
-   ```
-
----
-
-## 质量保证机制
-
-### 多层质量检查
-
-```
-第一层：架构质量检查
-  vibe-architect 验证：设计合理性、技术栈合适性
-
-第二层：代码质量检查
-  vibe-reviewer 验证：代码风格、安全性、性能
-
-第三层：测试质量检查
-  vibe-debugger 验证：测试覆盖、边缘情况
-
-第四层：文档质量检查
-  vibe-documenter 验证：文档完整性、准确性
-
-第五层：最终质量把控
-  vibe-architect 验证：整体完整性、交付标准
-```
-
-### 人工审查门控
-
-在关键节点引入人工审查：
-
-```bash
-[vibe-architect] 以下决策需要人工确认：
-  - 架构设计的重大变更
-  - 技术栈的选择和调整
-  - 安全相关的实现
-  - 性能优化的方案
-  - 最终交付的验收
+[vibe-coding] 开发 Web 应用
+  ↓
+/playwright         # 端到端测试
+  ↓
+/obsidian-markdown  # 格式化文档
+  ↓
+/docx               # 生成 Word 文档
+  ↓
+/pdf                # 导出 PDF
 ```
 
 ---
 
 ## 限制和注意事项
 
-1. **模型限制**
-   - 所有 Agent 共用同一个底层模型（Claude Sonnet 4.5）
-   - 通过角色定义和 Prompt Engineering 模拟不同能力
+### 适用场景
+✅ 快速原型开发
+✅ 内部工具/MVP
+✅ 个人项目
+✅ 概念验证 (POC)
+✅ 学习和技术调研
+✅ API 开发
+✅ 中小型项目
 
-2. **并发限制**
-   - 实际上是串行调用各 Agent，但逻辑上可并行
-   - 优化工作流程以减少依赖关系
-
-3. **上下文管理**
-   - Agent 之间通过文本传递信息
-   - vibe-architect 维护完整的项目上下文
-
-4. **不适用场景**
-   - ❌ 大规模生产环境（需要严格的质量保证）
-   - ❌ 高安全性系统（需要专业安全审计）
-   - ❌ 实时交互系统（延迟较高）
-   - ❌ 复杂的遗留系统维护
-
-5. **适用场景**
-   - ✅ 快速原型开发
-   - ✅ 个人工具和脚本
-   - ✅ 内部工具和 MVP
-   - ✅ 概念验证（POC）
-   - ✅ 学习和技术调研
+### 不适用场景
+❌ 高安全性系统 (需专业审计)
+❌ 大规模生产环境 (需严格 QA)
+❌ 实时交互系统 (延迟较高)
+❌ 复杂遗留系统维护
 
 ---
 
-## 总结
+## 版本历史
 
-Vibe Coding Team SKILL 提供了一个基于自然语言的 AI 编程协作系统：
-
-✅ **核心理念**:
-- 从"如何实现"转向"需要什么"
-- 开发者扮演指挥家，AI 扮演乐手
-- 通过自然语言驱动开发流程
-
-✅ **Agent 团队**:
-- vibe-architect：架构指挥官
-- vibe-coder：编码乐手
-- vibe-reviewer：质量守门人
-- vibe-debugger：调试专家
-- vibe-documenter：文档生成器
-
-✅ **工作流程**:
-- 完整的四阶段流程（创意 → 生成 → 调试 → 审查）
-- 快速原型开发流程
-- 迭代优化流程
-- 并行开发流程
-
-✅ **质量保证**:
-- 多层质量检查机制
-- 人工审查门控
-- 持续迭代优化
-
-**灵感来源**: Andrej Karpathy 的 Vibe Coding 理念
-**参考架构**: ai-agent-team SKILL
-**作者**: 基于开源社区实践
+| 版本 | 日期 | 变更 |
+|------|------|------|
+| v2.0.0 | 2026-01-30 | 工程化流程重构：五阶段流程、TDD铁律、双阶段审查 |
+| v1.1.0 | 2026-01-26 | 添加 Security-Advisor，完善文档 |
+| v1.0.0 | 2026-01-20 | 初始版本，6个核心 Agent |
 
 ---
 
-**版本**: 1.0.0
-**最后更新**: 2026-01-26
-**维护者**: Vibe Coding Team Community
+**作者**: Vibe Coding Team Community
+**许可**: MIT License
+**参考**: Superpowers Workflow, Skills Library
